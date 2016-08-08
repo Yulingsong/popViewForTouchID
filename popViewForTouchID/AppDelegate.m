@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
+#import "YLSTouchidView.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    //appdelegate
+    _window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    _window.backgroundColor = [UIColor whiteColor];
+    [_window makeKeyAndVisible];
+    ViewController *vc = [[ViewController alloc]init];
+    UINavigationController *na = [[UINavigationController alloc]initWithRootViewController:vc];
+    _window.rootViewController = na;
     return YES;
 }
 
@@ -35,7 +44,17 @@
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    NSString *touchIDExist = [[NSUserDefaults standardUserDefaults]objectForKey:@"TouchID"];
+    NSString *touchISOn = [[NSUserDefaults standardUserDefaults]objectForKey:@"touchIDISon"];
+    NSLog(@"touchIDExist---%@---touchISOn---%@",touchIDExist,touchISOn);
+    if ([touchIDExist isEqualToString:@"1"] && [touchISOn isEqualToString:@"NO"])
+    {
+        YLSTouchidView *yls = [[YLSTouchidView alloc]init];
+        [yls show];
+    }
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(20 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [[NSUserDefaults standardUserDefaults]setObject:@"NO" forKey:@"touchIDISon"];
+    });
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {

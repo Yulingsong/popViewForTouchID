@@ -1,0 +1,25 @@
+//
+//  PrefixHeader.pch
+//  popViewForTouchID
+//
+//  Created by yulingsong on 16/8/8.
+//  Copyright © 2016年 yulingsong. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will als//o need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "AppDelegate.h"
+#import "WJTouchID.h"
+#import "MBProgressHUD.h"
+#import "MBProgressHUD+Add.h"
+
+// 屏幕bounds
+#define YLSScreenBounds [UIScreen mainScreen].bounds
+//位置
+#define ZLRect(x, y, w, h)  CGRectMake([UIScreen mainScreen].bounds.size.width * x, [UIScreen mainScreen].bounds.size.height * y, [UIScreen mainScreen].bounds.size.width * w,  [UIScreen mainScreen].bounds.size.height * h)
+//字体大小
+#define ZCFont(f) [UIScreen mainScreen].bounds.size.width * f
+#endif /* PrefixHeader_pch */
