@@ -459,11 +459,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				GCC_PREFIX_HEADER = "/Users/apple/Desktop/指纹解锁/popViewForTouchID/popViewForTouchID/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/popViewForTouchID/PrefixHeader.pch";
 				INFOPLIST_FILE = popViewForTouchID/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = yulingsong.popViewForTouchID;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yulingsong;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -475,11 +475,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				GCC_PREFIX_HEADER = "/Users/apple/Desktop/指纹解锁/popViewForTouchID/popViewForTouchID/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/popViewForTouchID/PrefixHeader.pch";
 				INFOPLIST_FILE = popViewForTouchID/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = yulingsong.popViewForTouchID;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yulingsong;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
